@@ -1,0 +1,39 @@
+B1
+#include <iostream>
+using namespace std;
+void main() {
+	int target = 16;
+	int nums[] = { 1,2,7,11,15 };
+	int n = sizeof nums / sizeof(int);
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 1; j < n; j++) {
+			if (nums[i] + nums[i + j] == target) {
+				cout << "[" << i << ", " << i+j << "]";
+				return;
+			}
+		}
+	}
+	cout << "Khong tim thay";
+}
+B2
+#include <iostream>
+using namespace std;
+void main() {
+	int a[] = { 1 };
+	int n = sizeof a / sizeof(int);
+	for (int i = 0; i < n; i++) {
+		bool isbreak = false;
+		for (int j = 0; j < n; j++) {
+			if (a[i] == a[j] && i!=j) {
+				isbreak = true;
+				break;
+			}
+		}
+		if (!isbreak) {
+			cout << a[i];
+			return;
+		}
+	}
+	cout << "Khong tim thay";
+}
