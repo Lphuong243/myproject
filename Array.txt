@@ -16,7 +16,7 @@ void main() {
 	}
 	cout << "Khong tim thay";
 }
-B2
+B3
 #include <iostream>
 using namespace std;
 void main() {
